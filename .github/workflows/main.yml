@@ -29,6 +29,7 @@ jobs:
         python-version: 3.8
     - name: Lint with pylint
       run: |
+        make install
         make lint
 
   test:
