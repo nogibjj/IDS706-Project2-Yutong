@@ -16,11 +16,23 @@ jobs:
     - name: Install dependencies
       run: |
         make install
+
   lint:
+    
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
     - name: Lint with pylint
       run: |
         make lint
+        
   test:
+    
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
     - name: Test
       run: |
         make test
